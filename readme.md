@@ -12,6 +12,7 @@ Copy the .env.example in you .env file
 This project requiere the following packages :
 
 sudo apt-get install phpunit
+
 sudo apt-get install sqlite3
 
 
