@@ -9,6 +9,8 @@
 
 namespace App;
 
+use DB;
+
 class Parser
 {
 
@@ -63,13 +65,12 @@ class Parser
                 $call_to = self::checkPhoneNumber($call_to);
 
                 DB::insert("INSERT INTO cdrs ('cust_id', 'call_from', 'call_to', 'call_start', 'call_duration' ) values ($cust_id,'$call_from','$call_to','$call_start',$call_duration)");
-
-                echo 'All the data have been inserted in the database.';
             }
             else{
                 $firstLine = false;
             }
 
         }
+        echo 'All the data have been inserted in the database. \n';
     }
 }
